@@ -13,6 +13,12 @@ public class Balok implements MenghitungRuang{
 
     private double p, l, t;
 
+    public Balok(double p, double l, double t) {
+        this.p = p;
+        this.l = l;
+        this.t = t;
+    }
+
     public double getP() {
         return p;
     }

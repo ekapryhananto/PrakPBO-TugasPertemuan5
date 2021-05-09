@@ -13,6 +13,11 @@ public class Persegi implements MenghitungBidang{
 
     private double p, l;
 
+    public Persegi(double p, double l) {
+        this.p = p;
+        this.l = l;
+    }
+
     public double getP() {
         return p;
     }

@@ -51,9 +51,6 @@ public class View extends JFrame implements ActionListener{
         add(lTinggi);
         add(fTinggi);
         add(lHasil);
-        //add(lKelilingP);
-       // add(lVolumeB);
-       // add(lLuasPer);
         add(bHitung);
         add(bReset);
         
@@ -64,10 +61,6 @@ public class View extends JFrame implements ActionListener{
         lTinggi.setBounds(10,70,150,20);
         fTinggi.setBounds(90, 70, 200, 20);
         lHasil.setBounds(50, 100, 150, 20);
-       // lLuasP.setBounds(50, 120, 150, 20);
-       // lKelilingP.setBounds(50, 150, 150, 20);
-       // lVolumeB.setBounds(50, 180, 150, 20);
-       // lLuasPer.setBounds(50, 210, 150, 20);
         bHitung.setBounds(45, 250, 100, 30);
         bReset.setBounds(150, 250, 100, 30);
         bHitung.addActionListener(this);
@@ -84,25 +77,17 @@ public class View extends JFrame implements ActionListener{
             
             try{
                 double p, l, t;
-               // double a = 0, b = 0, c = 0, d = 0;
 
                 p = Double.parseDouble(fPanjang.getText());
                 l = Double.parseDouble(fLebar.getText());
                 t = Double.parseDouble(fTinggi.getText());
 
 
-                Persegi per = new Persegi();
-                per.setP(p);
-                per.setL(l);
-                Balok bal = new Balok();
-                bal.setP(p);
-                bal.setL(l);
-                bal.setT(t);
+                Persegi per = new Persegi(p, l);
+                Balok bal = new Balok(p, l, t);
+              
 
-               /* a = p*l;
-                b = 2*(p+l);
-                c = p*l*t;
-                d = 2*(p*l + p*t + l*t);*/          
+                        
 
                 lLuasP.setText("Luas Persegi    : " + Double.toString(per.luas()));
                 add(lLuasP);
